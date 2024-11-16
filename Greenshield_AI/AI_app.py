@@ -174,16 +174,11 @@ css = """
     """
 
 
-html = """<h1>🌿 GreenShield AI</h1>
-          <p>How can GreenShield AI Help you today?</p>
-          """
-st.markdown("""<style>
-            .p {
-            color: white;
-            align-text:centre;
-              }
-            </style>
-            """, unsafe_allow_html=True)
+html = """
+<h1>🌿 GreenShield AI</h1>
+<p style="text-align: center; font-size: 1.2rem;">How can GreenShield AI Help you today?</p>
+"""
+
 st.markdown(html, unsafe_allow_html=True)
 st.markdown(css, unsafe_allow_html=True)
 
