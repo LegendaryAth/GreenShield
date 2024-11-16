@@ -155,6 +155,11 @@ st.markdown(
     .block-container {
     background: #2f2f2f;
     border-radius:40px;}
+    
+    .h1{
+    border: solid white 2px;
+    border-radius: 11px;
+    }
     </style>
     """,
     unsafe_allow_html=True
