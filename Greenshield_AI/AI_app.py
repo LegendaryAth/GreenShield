@@ -180,7 +180,7 @@ html = """<h1>🌿 GreenShield AI</h1>
 st.markdown("""<style>
             .p {
             color: white;
-            align-content:center;
+            align-text:center;
               }
             </style>
             """, unsafe_allow_html=True)
