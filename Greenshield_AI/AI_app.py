@@ -174,28 +174,10 @@ css = """
     """
 
 
-html =   """
-    <style>
-    /* Add a white background around the entire main content */
-    .main-container {
-        background-color: white;
-        border-radius: 15px;
-        padding: 30px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        max-width: 90%; /* Limit width to make it visually appealing */
-        margin: auto; /* Center the content on the screen */
-    }
-
-    /* Center the content of the page */
-    .main-container h1, .main-container p {
-        text-align: center;
-    }
-    </style>
-    <div class="main-container">
-        <h1>🌿 GreenShield AI</h1>
-        <p>How can GreenShield AI Help you today?</p>
-    </div>
-    """
+html = """
+<h1>🌿 GreenShield AI</h1>
+<p style="text-align: center; font-size: 1.2rem;">How can GreenShield AI Help you today?</p>
+"""
 
 st.markdown(html, unsafe_allow_html=True)
 st.markdown(css, unsafe_allow_html=True)
