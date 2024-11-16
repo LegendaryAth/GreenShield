@@ -154,7 +154,7 @@ st.markdown(
     }
     .block-container {
     background: #2f2f2f;
-    border-radius:10px;}
+    border-radius:40px;}
     </style>
     """,
     unsafe_allow_html=True
@@ -166,6 +166,20 @@ html = """<h1>🌿 GreenShield AI</h1>
 st.markdown(html, unsafe_allow_html=True)
 
 user_prompt = st.text_input("Type your prompt here pls: ", placeholder="Type your query here...")
+st.markdown(
+    """
+    <style>
+    /* Change the label color for the text input */
+    div[class^="stTextInput"] label {
+        font-size: 1.2rem;
+        color: #4caf50; /* Your desired color */
+        font-weight: bold;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 if st.button("Get Response"):
     if user_prompt.strip():
