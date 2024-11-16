@@ -43,16 +43,7 @@ css = """
         text-align: center;
         margin-bottom: 20px;
         font-weight: bold;
-    }
-    h1::after {
-        content: '';
-        display: block;
-        width: 50px;
-        height: 4px;
-        background: #66bb6a;
-        margin: 10px auto 0;
-        border-radius: 2px;
-    }
+    }   
 
     /* Input Field */
     .stTextInput label {
@@ -152,11 +143,16 @@ css = """
         }
     }
 
-    .block-container {
+    .section {
     background: #2f2f2f;
+    border: solid #2f2f2f 2px;
     border-radius:40px;
     }
 
+    .p {
+    color: black;
+    }
+    
     .h1{
     font-size: 2.5rem;
     color: neongreen;
