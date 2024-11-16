@@ -183,7 +183,7 @@ st.markdown("""<style>
             align-content:center;
             </style>
     }
-            """)
+            """, unsafe_allow_html=True)
 st.markdown(html, unsafe_allow_html=True)
 st.markdown(css, unsafe_allow_html=True)
 
