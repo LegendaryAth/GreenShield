@@ -195,9 +195,7 @@ html =   """
         <h1>🌿 GreenShield AI</h1>
         <p>How can GreenShield AI Help you today?</p>
     </div>
-    """,
-    unsafe_allow_html=True
-)
+    """
 
 st.markdown(html, unsafe_allow_html=True)
 st.markdown(css, unsafe_allow_html=True)
