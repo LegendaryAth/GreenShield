@@ -41,9 +41,22 @@ css = """
         font-size: 2.5rem;
         color: #1b5e20;
         text-align: center;
+        border: solid black 2px;
+        border-radius: 40px;
+        background: #2f2f2f;
         margin-bottom: 20px;
         font-weight: bold;
-    }   
+        color: #69c227; 
+    }
+    h1::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 4px;
+        background: #66bb6a;
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
 
     /* Input Field */
     .stTextInput label {
