@@ -153,7 +153,8 @@ st.markdown(
         }
     }
     .block-container {
-    background: #2f2f2f}
+    background: #2f2f2f;
+    border-radius:10px;}
     </style>
     """,
     unsafe_allow_html=True
