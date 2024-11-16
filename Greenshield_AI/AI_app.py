@@ -26,7 +26,7 @@ st.markdown(
     .main {
         max-width: 900px;
         margin: 80px auto;
-        background: #ffffff;
+        background: #f2f2f2;
         border-radius: 20px;
         padding: 40px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
