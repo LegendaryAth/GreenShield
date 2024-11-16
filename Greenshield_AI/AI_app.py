@@ -181,8 +181,9 @@ st.markdown("""<style>
             .p {
             color: white;
             align-content:center;
-    }
-            """)
+              }
+            </style>
+            """, unsafe_allow_html=True)
 st.markdown(html, unsafe_allow_html=True)
 st.markdown(css, unsafe_allow_html=True)
 
@@ -198,8 +199,7 @@ st.markdown(
     }
     </style>
     """,
-    unsafe_allow_html=True
-)
+    unsafe_allow_html=True)
 
 
 if st.button("Get Response"):
