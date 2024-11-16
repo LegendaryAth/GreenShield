@@ -156,13 +156,9 @@ css = """
         }
     }
 
-    .section {
-    background: #2f2f2f;
-    border: solid #2f2f2f 2px;
-    border-radius: 40px;
-    }
+    
 
-    .p {
+    .p1 {
     color: black;
     }
     
@@ -182,7 +178,7 @@ css = """
 
 
 html = """<h1>🌿 GreenShield AI</h1>
-          <p>           How can GreenShield AI Help you today?</p>
+          <p>How can GreenShield AI Help you today?</p>
           """
 st.markdown(html, unsafe_allow_html=True)
 st.markdown(css, unsafe_allow_html=True)
