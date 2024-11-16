@@ -164,7 +164,7 @@ html = """<h1>🌿 GreenShield AI</h1>
           """
 st.markdown(html, unsafe_allow_html=True)
 
-user_prompt = st.text_input("Type your prompt here:", placeholder="Type your query here...")
+user_prompt = st.text_input("Type your prompt here pls: ", placeholder="Type your query here...")
 
 if st.button("Get Response"):
     if user_prompt.strip():
