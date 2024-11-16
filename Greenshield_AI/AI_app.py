@@ -25,7 +25,7 @@ st.markdown(
     /* Center the content container */
     .main {
         max-width: 800px;
-        margin: 80px auto;
+        margin: 50px auto;
         background: #2f2f2f;
         border-radius: 12px;
         padding: 30px;
