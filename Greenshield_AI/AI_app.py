@@ -160,7 +160,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 html = """<h1>🌿 GreenShield AI</h1>
-          <p>How can GreenShield AI Help you today?</p>
+          <p>How cannot GreenShield AI Help you today?</p>
           """
 st.markdown(html, unsafe_allow_html=True)
 
