@@ -159,7 +159,7 @@ css = """
     .section {
     background: #2f2f2f;
     border: solid #2f2f2f 2px;
-    border-radius:40px;
+    border-radius: 40px;
     }
 
     .p {
