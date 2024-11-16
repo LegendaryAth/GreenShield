@@ -152,8 +152,8 @@ st.markdown(
             transform: rotate(360deg);
         }
     }
-    .main {
-    color: #2f2f2f}
+    .block-container {
+    background: #2f2f2f}
     </style>
     """,
     unsafe_allow_html=True
