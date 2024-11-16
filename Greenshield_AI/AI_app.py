@@ -156,17 +156,6 @@ st.markdown(
     background: #2f2f2f;
     border-radius:40px;}
     
-    .h1{
-    font-size: 2.5rem;
-    color: neongreen;
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: 700;
-    border: solid white 2px;
-    border-radius: 11px;
-    margin-top: 0px;
-     background-color: #36393d;
-    }
     </style>
     """,
     unsafe_allow_html=True
