@@ -153,7 +153,7 @@ st.markdown(
         }
     }
     .main {
-    color: #f2f2f2}
+    color: #2f2f2f}
     </style>
     """,
     unsafe_allow_html=True
