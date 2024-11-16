@@ -10,8 +10,7 @@ def draft_message(content, role='user'):
 api_key = "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"
 client = Groq(api_key=api_key)
 
-st.markdown(
-    """
+css = """
     <style>
     /* Body Styling */
     body {
@@ -152,10 +151,12 @@ st.markdown(
             transform: rotate(360deg);
         }
     }
+
     .block-container {
     background: #2f2f2f;
-    border-radius:40px;}
-    
+    border-radius:40px;
+    }
+
     .h1{
     font-size: 2.5rem;
     color: neongreen;
@@ -168,14 +169,14 @@ st.markdown(
      background-color: #36393d;
     }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+    """
+
 
 html = """<h1>🌿 GreenShield AI</h1>
           <p>How can GreenShield AI Help you today?</p>
           """
 st.markdown(html, unsafe_allow_html=True)
+st.markdown(css, unsafe_allow_html=True)
 
 user_prompt = st.text_input("Type your prompt here pls: ", placeholder="Type your query here...")
 st.markdown(
