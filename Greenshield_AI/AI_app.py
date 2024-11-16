@@ -158,9 +158,6 @@ css = """
 
     
 
-    .p1 {
-    color: black;
-    }
     
     .h1{
     font-size: 2.5rem;
@@ -180,6 +177,13 @@ css = """
 html = """<h1>🌿 GreenShield AI</h1>
           <p>How can GreenShield AI Help you today?</p>
           """
+st.markdown("""<style>
+            .p {
+            color: white;
+            align-content:center;
+            </style>
+    }
+            """)
 st.markdown(html, unsafe_allow_html=True)
 st.markdown(css, unsafe_allow_html=True)
 
