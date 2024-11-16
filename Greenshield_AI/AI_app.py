@@ -152,7 +152,7 @@ st.markdown(
             transform: rotate(360deg);
         }
     }
-    . block-container {
+    .stMainBlockContainer {
     color: #f2f2f2}
     </style>
     """,
