@@ -1,4 +1,4 @@
-2dimport streamlit as st
+import streamlit as st
 from groq import Groq
 
 def draft_message(content, role='user'):
