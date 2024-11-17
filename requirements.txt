@@ -1,4 +1,3 @@
 groq == 0.12.0
 streamlit == 1.40.1
 SpeechRecognition == 3.11.0
-PyAudio == 0.2.14
