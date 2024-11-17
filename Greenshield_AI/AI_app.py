@@ -6,7 +6,7 @@ def draft_message(content, role='user'):
         "role": role,
         "content": content
     }
-col1, col2 = st.columns([3, 1])
+
 api_key = "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"
 client = Groq(api_key=api_key)
 
@@ -182,7 +182,7 @@ html = """
 st.markdown(html, unsafe_allow_html=True)
 st.markdown(css, unsafe_allow_html=True)
 
-user_prompt = col1.text_input("Type your prompt here pls: ", placeholder="Type your query here...")
+user_prompt = st.text_input("Type your prompt here pls: ", placeholder="Type your query here...")
 st.markdown(
     """
     <style>
@@ -197,7 +197,7 @@ st.markdown(
     unsafe_allow_html=True)
 
 
-if col2.button("Get Response"):
+if st.button("Get Response"):
     if user_prompt.strip():
         with st.spinner("Generating response..."):
             messages = [
