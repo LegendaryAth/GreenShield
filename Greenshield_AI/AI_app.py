@@ -1,5 +1,6 @@
 import streamlit as st
 from groq import Groq
+import speech_recognition as sr
 
 def draft_message(content, role='user'):
     return {
@@ -155,21 +156,6 @@ css = """
             transform: rotate(360deg);
         }
     }
-
-    
-
-    
-    .h1{
-    font-size: 2.5rem;
-    color: neongreen;
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: 700;
-    border: solid white 2px;
-    border-radius: 11px;
-    margin-top: 0px;
-     background-color: #36393d;
-    }
     </style>
     """
 
@@ -182,7 +168,33 @@ html = """
 st.markdown(html, unsafe_allow_html=True)
 st.markdown(css, unsafe_allow_html=True)
 
-user_prompt = st.text_input("Type your prompt here pls: ", placeholder="Type your query here...")
+# Voice Input Section
+def recognize_speech():
+    recognizer = sr.Recognizer()
+    with sr.Microphone() as source:
+        st.info("Listening... Speak now!")
+        try:
+            audio = recognizer.listen(source, timeout=5)
+            text = recognizer.recognize_google(audio)
+            return text
+        except sr.UnknownValueError:
+            st.warning("Sorry, could not understand the audio.")
+        except sr.RequestError as e:
+            st.error(f"Error with the speech recognition service: {e}")
+    return ""
+
+# Add a button for voice input
+if st.button("🎤 Speak"):
+    voice_prompt = recognize_speech()
+    if voice_prompt:
+        st.success(f"You said: {voice_prompt}")
+        user_prompt = voice_prompt
+    else:
+        user_prompt = ""
+
+else:
+    user_prompt = st.text_input("Type your prompt here pls: ", placeholder="Type your query here...")
+
 st.markdown(
     """
     <style>
@@ -194,8 +206,8 @@ st.markdown(
     }
     </style>
     """,
-    unsafe_allow_html=True)
-
+    unsafe_allow_html=True
+)
 
 if st.button("Get Response"):
     if user_prompt.strip():
