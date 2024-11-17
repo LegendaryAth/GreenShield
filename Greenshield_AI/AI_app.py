@@ -1,6 +1,9 @@
 import streamlit as st
 from groq import Groq
 import speech_recognition as sr
+import sounddevice as sd
+from scipy.io.wavfile import write
+import tempfile
 
 def draft_message(content, role='user'):
     return {
@@ -168,15 +171,26 @@ html = """
 st.markdown(html, unsafe_allow_html=True)
 st.markdown(css, unsafe_allow_html=True)
 
+def record_audio(duration=5, samplerate=44100):
+    st.info("Recording... Speak now!")
+    audio = sd.rec(int(duration * samplerate), samplerate=samplerate, channels=1, dtype='int16')
+    sd.wait()  # Wait for the recording to complete
+    return audio, samplerate
+
+def save_audio(audio, samplerate):
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as temp_wav:
+        write(temp_wav.name, samplerate, audio)
+        return temp_wav.name
+
 # Voice Input Section
 def recognize_speech():
+    audio, samplerate = record_audio()
+    audio_path = save_audio(audio, samplerate)
     recognizer = sr.Recognizer()
-    with sr.Microphone() as source:
-        st.info("Listening... Speak now!")
+    with sr.AudioFile(audio_path) as source:
+        audio_data = recognizer.record(source)
         try:
-            audio = recognizer.listen(source, timeout=5)
-            text = recognizer.recognize_google(audio)
-            return text
+            return recognizer.recognize_google(audio_data)
         except sr.UnknownValueError:
             st.warning("Sorry, could not understand the audio.")
         except sr.RequestError as e:
