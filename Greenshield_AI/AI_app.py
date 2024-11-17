@@ -1,19 +1,16 @@
 import streamlit as st
 from groq import Groq
-import speech_recognition as sr  # Speech recognition library
+import speech_recognition as sr 
 
-# Function to draft messages
 def draft_message(content, role='user'):
     return {
         "role": role,
         "content": content
     }
 
-# API Key for Groq Client
 api_key = "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"
 client = Groq(api_key=api_key)
 
-# CSS Styling
 css = """
 <style>
     .response-box {
@@ -58,7 +55,6 @@ css = """
 </style>
 """
 
-# HTML for Speech Input Integration
 speech_recognition_html = """
 <script>
     const input = document.getElementById("speech-input");
