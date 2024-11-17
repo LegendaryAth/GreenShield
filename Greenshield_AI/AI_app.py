@@ -23,7 +23,7 @@ css = """
     }
     #speech-btn {
         background-color: #66bb6a;
-        color: white;
+        color: black;
         border: none;
         padding: 10px 20px;
         border-radius: 5px;
