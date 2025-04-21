@@ -7,7 +7,7 @@ def draft_message(content, role='user'):
         "content": content
     }
 
-api_key = "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"
+api_key = "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"
 client = Groq(api_key=api_key)
 
 css = """
